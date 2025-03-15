@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Signup</title>
+        <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            /* Solid border */
+            hr.solid {
+              border-top: 3px solid #bbb;
+            }
+        </style>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LcfivUqAAAAAM25cj3mcQVLwe1MmVaN8rOeVsAU"></script>
+        <script>
+            function onClick(e) {
+              e.preventDefault();
+              grecaptcha.ready(function() {
+                grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+                    window.location.replace("file://Users/naomyh/Documents/Website/signup.html")
+                });
+              });
+            }
+        </script>
+    </head>
+    <body>
+        <center><form>
+            Email:<input type="email">
+            <br>
+            <br>
+            Name:<input type="text">
+            <br><br>
+            Password:<input type="password">
+            <br><br>
+            Verify Password:<input type="password">
+            <br><br>
+            Birth Date:<input type="date">
+            <br><br>
+            User Id:<select>
+                <option value=""></option>
+                
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+                <option value="Cheer" readonly>Cheer</option>
+                <option value="dog">Dog</option>
+                <option value="elephant">Elephant</option>
+                <option value="forest">Forest</option>
+                <option value="giraffe">Giraffe</option>
+                <option value="horizon">Horizon</option>
+                <option value="island">Island</option>
+                <option value="jungle">Jungle</option>
+                <option value="kite">Kite</option>
+                <option value="lemon">Lemon</option>
+                <option value="mountain">Mountain</option>
+                <option value="night">Night</option>
+                <option value="ocean">Ocean</option>
+                <option value="pencil">Pencil</option>
+                <option value="quartz">Quartz</option>
+                <option value="river">River</option>
+                <option value="sun">Sun</option>
+                <option value="tree">Tree</option>
+                <option value="umbrella">Umbrella</option>
+                <option value="volcano">Volcano</option>
+                <option value="whale">Whale</option>
+                <option value="xylophone">Xylophone</option>
+                <option value="yacht">Yacht</option>
+                <option value="zebra">Zebra</option>
+                <option value="ant">Ant</option>
+                <option value="bridge">Bridge</option>
+                <option value="cloud">Cloud</option>
+                <option value="dolphin">Dolphin</option>
+                <option value="eagle">Eagle</option>
+                <option value="flame">Flame</option>
+                <option value="glacier">Glacier</option>
+                <option value="harbor">Harbor</option>
+                <option value="iceberg">Iceberg</option>
+                <option value="jewel">Jewel</option>
+                <option value="kangaroo">Kangaroo</option>
+                <option value="lantern">Lantern</option>
+                <option value="meadow">Meadow</option>
+                <option value="nebula">Nebula</option>
+                <option value="orchid">Orchid</option>
+                <option value="prairie">Prairie</option>
+                <option value="quiver">Quiver</option>
+                <option value="rainbow">Rainbow</option>
+                <option value="star">Star</option>
+                <option value="tornado">Tornado</option>
+                <option value="unicorn">Unicorn</option>
+                <option value="valley">Valley</option>
+                <option value="wind">Wind</option>
+                <option value="zephyr">Zephyr</option>
+            </select>
+            <select>
+                <option value=""></option>
+                <option value="anchor">Anchor</option>
+                <option value="balloon">Balloon</option>
+                <option value="cactus">Cactus</option>
+                <option value="Clear" readonly>Clear</option>
+                <option value="driftwood">Driftwood</option>
+                <option value="emerald">Emerald</option>
+                <option value="falcon">Falcon</option>
+                <option value="galaxy">Galaxy</option>
+                <option value="harp">Harp</option>
+                <option value="igloo">Igloo</option>
+                <option value="jigsaw">Jigsaw</option>
+                <option value="koala">Koala</option>
+                <option value="lighthouse">Lighthouse</option>
+                <option value="moose">Moose</option>
+                <option value="nebula">Nebula</option>
+                <option value="octopus">Octopus</option>
+                <option value="parrot">Parrot</option>
+                <option value="quokka">Quokka</option>
+                <option value="raspberry">Raspberry</option>
+                <option value="sapphire">Sapphire</option>
+                <option value="telescope">Telescope</option>
+                <option value="underwater">Underwater</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="waterfall">Waterfall</option>
+                <option value="xenon">Xenon</option>
+                <option value="yogurt">Yogurt</option>
+                <option value="zeppelin">Zeppelin</option>
+                <option value="albatross">Albatross</option>
+                <option value="breeze">Breeze</option>
+                <option value="compass">Compass</option>
+                <option value="dandelion">Dandelion</option>
+                <option value="evergreen">Evergreen</option>
+                <option value="fjord">Fjord</option>
+                <option value="geyser">Geyser</option>
+                <option value="horizon">Horizon</option>
+                <option value="iris">Iris</option>
+                <option value="jade">Jade</option>
+                <option value="kangaroo">Kangaroo</option>
+                <option value="lotus">Lotus</option>
+                <option value="mango">Mango</option>
+                <option value="nocturne">Nocturne</option>
+                <option value="oasis">Oasis</option>
+                <option value="penguin">Penguin</option>
+                <option value="quartz">Quartz</option>
+                <option value="rainforest">Rainforest</option>
+                <option value="sunflower">Sunflower</option>
+                <option value="tsunami">Tsunami</option>
+                <option value="utopia">Utopia</option>
+                <option value="vortex">Vortex</option>
+                <option value="whirlpool">Whirlpool</option>
+                <option value="zeppelin">Zeppelin</option>
+            </select>
+            <input type="number">
+            <br><br>
+            Admin:<select>
+                <option></option>
+                <option>CheerClear2535</option>
+            </select>
+            <hr class="solid">
+            <h1>All fields bellow need admin verifacation</h1>
+            Role:<select>
+                <option>Skip</option>
+                <option>User</option>
+                <option>Admin</option>
+            </select>
+            <br><br>
+            Use Ststem Protocall:<input type="checkbox">
+            <hr class="solid">
+            <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+        </form></center>
+    </body>
+</html>
