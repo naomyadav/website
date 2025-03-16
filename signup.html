@@ -5,45 +5,43 @@
             body {
               font-family: Arial, Helvetica, sans-serif;
             }
-            
-            /* Solid border */
             hr.solid {
               border-top: 3px solid #bbb;
             }
         </style>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script>
-            function onSubmit(token) {
-              document.getElementById("demo-form").submit();
-            }
-        </script>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LcfivUqAAAAAM25cj3mcQVLwe1MmVaN8rOeVsAU"></script>
-        <script>
-            function onClick(e) {
-              e.preventDefault();
-              grecaptcha.ready(function() {
-                grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
-                    window.location.replace("file://Users/naomyh/Documents/Website/signup.html")
-                });
-              });
-            }
-        </script>
+        <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+        <style>
+          #editor—wrapper {
+            border: 1px solid #ccc;
+            z-index: 100;
+            /* If you need */
+          }
+      
+          #toolbar-container {
+            border-bottom: 1px solid #ccc;
+          }
+      
+          #editor-container {
+            height: 500px;
+          }
+        </style>
+        
     </head>
     <body>
         <center><form>
             Email:<input type="email">
             <br>
             <br>
-            Name:<input type="text">
+            Name:<input type="text" aria-required="true">
             <br><br>
-            Password:<input type="password">
+            Password:<input type="password" aria-required="true">
             <br><br>
-            Verify Password:<input type="password">
+            Verify Password:<input type="password" aria-required="true">
             <br><br>
-            Birth Date:<input type="date">
+            Birth Date:<input type="date" aria-required="true">
             <br><br>
             User Id:<select>
-                <option value=""></option>
+                <option value="" aria-required="true"></option>
                 
                 <option value="apple">Apple</option>
                 <option value="banana">Banana</option>
@@ -97,7 +95,7 @@
                 <option value="wind">Wind</option>
                 <option value="zephyr">Zephyr</option>
             </select>
-            <select>
+            <select aria-required="true">
                 <option value=""></option>
                 <option value="anchor">Anchor</option>
                 <option value="balloon">Balloon</option>
@@ -151,14 +149,14 @@
                 <option value="whirlpool">Whirlpool</option>
                 <option value="zeppelin">Zeppelin</option>
             </select>
-            <input type="number">
+            <input type="text" maxlength="4" minlength="4" aria-required="true">
             <br><br>
-            Admin:<select>
+            Admin:<select aria-required="true">
                 <option></option>
-                <option>CheerClear2535</option>
+                <option>CheerClear2316</option>
             </select>
             <hr class="solid">
-            <h1>All fields bellow need admin verifacation</h1>
+            <h1>All fields in this section need admin verifacation</h1>
             Role:<select>
                 <option>Skip</option>
                 <option>User</option>
@@ -167,10 +165,52 @@
             <br><br>
             Use Ststem Protocall:<input type="checkbox">
             <hr class="solid">
-            <button class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+            <h1>All fields in this section need developer verifacation</h1>
+            I am a developer:<input type="checkbox">
+            <br>
+            Note:<br>
+            <div id="toolbar-container"></div>
+            <div id="editor-container"></div>
+          
+            <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+            <script>
+              const { createEditor, createToolbar } = window.wangEditor;
+          
+              // Editor Configuration
+              const editorConfig = {
+                placeholder: 'Type here...',
+                onChange(editor) {
+                  const html = editor.getHtml();
+                  console.log('Editor content:', html);
+                  // You can sync HTML to <textarea> or other storage
+                },
+              };
+          
+              // Create Editor
+              const editor = createEditor({
+                selector: '#editor-container',
+                html: '<p><br></p>',
+                config: editorConfig,
+                mode: 'default', // 'default' or 'simple'
+              });
+          
+              // Toolbar Configuration
+              const toolbarConfig = {};
+          
+              // Create Toolbar
+              const toolbar = createToolbar({
+                editor,
+                selector: '#toolbar-container',
+                config: toolbarConfig,
+                mode: 'default', // 'default' or 'simple'
+              });
+            </script>
+            I heard about this from <input type="text">
+            <br><br>
+            My skills:<input type="text">
+          
+            <hr class="solid">
+            <input type="submit" value="Next">
         </form></center>
     </body>
 </html>
