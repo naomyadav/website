@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Signup</title>
+        <title>Signup Form</title>
         <style>
             body {
               font-family: Arial, Helvetica, sans-serif;
@@ -25,150 +25,182 @@
             height: 500px;
           }
         </style>
-        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }
+    
+            .editor-container {
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                border: 1px solid #ccc;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .toolbar {
+                display: flex;
+                margin-bottom: 10px;
+            }
+    
+            .toolbar button {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                padding: 5px 10px;
+                margin-right: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            .toolbar button:hover {
+                background-color: #f0f0f0;
+            }
+    
+            .editor {
+                min-height: 300px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                font-size: 16px;
+                white-space: pre-wrap;
+            }
+        </style>
     </head>
     <body>
         <center><form>
-            Email:<input type="email">
-            <br>
-            <br>
-            Name:<input type="text" aria-required="true">
-            <br><br>
-            Password:<input type="password" aria-required="true">
-            <br><br>
-            Verify Password:<input type="password" aria-required="true">
-            <br><br>
-            Birth Date:<input type="date" aria-required="true">
-            <br><br>
-            User Id:<select>
-                <option value="" aria-required="true"></option>
-                
-                <option value="apple">Apple</option>
-                <option value="banana">Banana</option>
-                <option value="cherry">Cherry</option>
-                <option value="Cheer" readonly>Cheer</option>
-                <option value="dog">Dog</option>
-                <option value="elephant">Elephant</option>
-                <option value="forest">Forest</option>
-                <option value="giraffe">Giraffe</option>
-                <option value="horizon">Horizon</option>
-                <option value="island">Island</option>
-                <option value="jungle">Jungle</option>
-                <option value="kite">Kite</option>
-                <option value="lemon">Lemon</option>
-                <option value="mountain">Mountain</option>
-                <option value="night">Night</option>
-                <option value="ocean">Ocean</option>
-                <option value="pencil">Pencil</option>
-                <option value="quartz">Quartz</option>
-                <option value="river">River</option>
-                <option value="sun">Sun</option>
-                <option value="tree">Tree</option>
-                <option value="umbrella">Umbrella</option>
-                <option value="volcano">Volcano</option>
-                <option value="whale">Whale</option>
-                <option value="xylophone">Xylophone</option>
-                <option value="yacht">Yacht</option>
-                <option value="zebra">Zebra</option>
-                <option value="ant">Ant</option>
-                <option value="bridge">Bridge</option>
-                <option value="cloud">Cloud</option>
-                <option value="dolphin">Dolphin</option>
-                <option value="eagle">Eagle</option>
-                <option value="flame">Flame</option>
-                <option value="glacier">Glacier</option>
-                <option value="harbor">Harbor</option>
-                <option value="iceberg">Iceberg</option>
-                <option value="jewel">Jewel</option>
-                <option value="kangaroo">Kangaroo</option>
-                <option value="lantern">Lantern</option>
-                <option value="meadow">Meadow</option>
-                <option value="nebula">Nebula</option>
-                <option value="orchid">Orchid</option>
-                <option value="prairie">Prairie</option>
-                <option value="quiver">Quiver</option>
-                <option value="rainbow">Rainbow</option>
-                <option value="star">Star</option>
-                <option value="tornado">Tornado</option>
-                <option value="unicorn">Unicorn</option>
-                <option value="valley">Valley</option>
-                <option value="wind">Wind</option>
-                <option value="zephyr">Zephyr</option>
-            </select>
-            <select aria-required="true">
-                <option value=""></option>
-                <option value="anchor">Anchor</option>
-                <option value="balloon">Balloon</option>
-                <option value="cactus">Cactus</option>
-                <option value="Clear" readonly>Clear</option>
-                <option value="driftwood">Driftwood</option>
-                <option value="emerald">Emerald</option>
-                <option value="falcon">Falcon</option>
-                <option value="galaxy">Galaxy</option>
-                <option value="harp">Harp</option>
-                <option value="igloo">Igloo</option>
-                <option value="jigsaw">Jigsaw</option>
-                <option value="koala">Koala</option>
-                <option value="lighthouse">Lighthouse</option>
-                <option value="moose">Moose</option>
-                <option value="nebula">Nebula</option>
-                <option value="octopus">Octopus</option>
-                <option value="parrot">Parrot</option>
-                <option value="quokka">Quokka</option>
-                <option value="raspberry">Raspberry</option>
-                <option value="sapphire">Sapphire</option>
-                <option value="telescope">Telescope</option>
-                <option value="underwater">Underwater</option>
-                <option value="volleyball">Volleyball</option>
-                <option value="waterfall">Waterfall</option>
-                <option value="xenon">Xenon</option>
-                <option value="yogurt">Yogurt</option>
-                <option value="zeppelin">Zeppelin</option>
-                <option value="albatross">Albatross</option>
-                <option value="breeze">Breeze</option>
-                <option value="compass">Compass</option>
-                <option value="dandelion">Dandelion</option>
-                <option value="evergreen">Evergreen</option>
-                <option value="fjord">Fjord</option>
-                <option value="geyser">Geyser</option>
-                <option value="horizon">Horizon</option>
-                <option value="iris">Iris</option>
-                <option value="jade">Jade</option>
-                <option value="kangaroo">Kangaroo</option>
-                <option value="lotus">Lotus</option>
-                <option value="mango">Mango</option>
-                <option value="nocturne">Nocturne</option>
-                <option value="oasis">Oasis</option>
-                <option value="penguin">Penguin</option>
-                <option value="quartz">Quartz</option>
-                <option value="rainforest">Rainforest</option>
-                <option value="sunflower">Sunflower</option>
-                <option value="tsunami">Tsunami</option>
-                <option value="utopia">Utopia</option>
-                <option value="vortex">Vortex</option>
-                <option value="whirlpool">Whirlpool</option>
-                <option value="zeppelin">Zeppelin</option>
-            </select>
-            <input type="text" maxlength="4" minlength="4" aria-required="true">
-            <br><br>
-            Admin:<select aria-required="true">
+            Name:<input type="text"><br><br>
+            Email:<input type="email"><br><br>
+            Password:<input type="password"><br><br>
+            Birth Date:<input type="date">
+            <br><br>Admin:
+            <select>
                 <option></option>
                 <option>CheerClear2316</option>
-            </select>
-            <hr class="solid">
-            <h1>All fields in this section need admin verifacation</h1>
-            Role:<select>
-                <option>Skip</option>
-                <option>User</option>
-                <option>Admin</option>
+                <option>AplleEcho2316</option>
             </select>
             <br><br>
-            Use Ststem Protocall:<input type="checkbox">
-            <hr class="solid">
-            <h1>All fields in this section need developer verifacation</h1>
+            User ID:<select id="words" name="words">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                    <option value="elephant">Elephant</option>
+                    <option value="frog">Frog</option>
+                    <option value="guitar">Guitar</option>
+                    <option value="harmony">Harmony</option>
+                    <option value="idea">Idea</option>
+                    <option value="jump">Jump</option>
+                    <option value="king">King</option>
+                    <option value="lemon">Lemon</option>
+                    <option value="moon">Moon</option>
+                    <option value="nature">Nature</option>
+                    <option value="orange">Orange</option>
+                    <option value="peacock">Peacock</option>
+                    <option value="queen">Queen</option>
+                    <option value="rose">Rose</option>
+                    <option value="sun">Sun</option>
+                    <option value="tree">Tree</option>
+                    <option value="umbrella">Umbrella</option>
+                    <option value="violet">Violet</option>
+                    <option value="water">Water</option>
+                    <option value="xylophone">Xylophone</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="zebra">Zebra</option>
+                    <option value="autumn">Autumn</option>
+                    <option value="blue">Blue</option>
+                    <option value="cloud">Cloud</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="elephant">Elephant</option>
+                    <option value="fish">Fish</option>
+                    <option value="green">Green</option>
+                    <option value="horizon">Horizon</option>
+                    <option value="island">Island</option>
+                    <option value="jungle">Jungle</option>
+                    <option value="kiwi">Kiwi</option>
+                    <option value="light">Light</option>
+                    <option value="mountain">Mountain</option>
+                    <option value="night">Night</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="pyramid">Pyramid</option>
+                    <option value="quilt">Quilt</option>
+                    <option value="rainbow">Rainbow</option>
+                    <option value="star">Star</option>
+                    <option value="tiger">Tiger</option>
+                    <option value="universe">Universe</option>
+                    <option value="vulture">Vulture</option>
+                    <option value="whale">Whale</option>
+                </select>
+                <select id="words2" name="words2">
+                    <option value="acorn">Acorn</option>
+                    <option value="bricks">Bricks</option>
+                    <option value="clouds">Clouds</option>
+                    <option value="dawn">Dawn</option>
+                    <option value="echo">Echo</option>
+                    <option value="frost">Frost</option>
+                    <option value="gale">Gale</option>
+                    <option value="horizon">Horizon</option>
+                    <option value="illusion">Illusion</option>
+                    <option value="jewel">Jewel</option>
+                    <option value="kiwi">Kiwi</option>
+                    <option value="lighthouse">Lighthouse</option>
+                    <option value="mystic">Mystic</option>
+                    <option value="noble">Noble</option>
+                    <option value="obsidian">Obsidian</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="quicksilver">Quicksilver</option>
+                    <option value="radiance">Radiance</option>
+                    <option value="silhouette">Silhouette</option>
+                    <option value="tundra">Tundra</option>
+                    <option value="velvet">Velvet</option>
+                    <option value="whisper">Whisper</option>
+                    <option value="xenon">Xenon</option>
+                    <option value="yellowstone">Yellowstone</option>
+                    <option value="zodiac">Zodiac</option>
+                    <option value="alchemy">Alchemy</option>
+                    <option value="blaze">Blaze</option>
+                    <option value="crystal">Crystal</option>
+                    <option value="drift">Drift</option>
+                    <option value="echo">Echo</option>
+                    <option value="flame">Flame</option>
+                    <option value="glimmer">Glimmer</option>
+                    <option value="haze">Haze</option>
+                    <option value="infinity">Infinity</option>
+                    <option value="jungle">Jungle</option>
+                    <option value="kaleidoscope">Kaleidoscope</option>
+                    <option value="lunar">Lunar</option>
+                    <option value="midnight">Midnight</option>
+                    <option value="nebula">Nebula</option>
+                    <option value="opal">Opal</option>
+                    <option value="prism">Prism</option>
+                    <option value="quilt">Quilt</option>
+                    <option value="raindrop">Raindrop</option>
+                    <option value="shadow">Shadow</option>
+                    <option value="twilight">Twilight</option>
+                </select>
+                <input type="number">
+            
+            <hr>
+            <h1>All fields in this section need admin verifacation</h1>
+            <select>
+                <option></option>
+                <option>User</option>
+                <option>Admin</option>
+                <option>HOD</option>
+                <option>GDUS</option>
+            </select>
+            <hr>
+            <h1>All fields in this setion require Developer permison</h1>
+
             I am a developer:<input type="checkbox">
-            <br>
-            Note:<br>
+
+            <br><br>
+
+            Note:
+
+            <!-- Rich Text Editor -->
             <div id="toolbar-container"></div>
             <div id="editor-container"></div>
           
@@ -205,12 +237,14 @@
                 mode: 'default', // 'default' or 'simple'
               });
             </script>
-            I heard about this from <input type="text">
+            I heard about this from: <input type="text">
             <br><br>
             My skills:<input type="text">
-          
-            <hr class="solid">
-            <input type="submit" value="Next">
+
+            <hr>
+
+            Submit:<input type="submit" value="Next"><br><br>
+            Next:<a href=""><button>Next</button></a>
         </form></center>
     </body>
 </html>
